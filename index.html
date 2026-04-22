@@ -1,45 +1,165 @@
-<div class="card">
-        <img src="https://i.postimg.cc/jSZvYDvc/Pi7-Tool-somes1.jpg" class="profile-img">
-        <span class="live-tag">LIVE</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somesh Thakre - VIP Cricket Tips</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '930539039813808');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=930539039813808&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        :root {
+            --bg-color: #05080a;
+            --card-color: #0f161c;
+            --neon-green: #00ff9d;
+            --neon-blue: #0084ff;
+            --neon-yellow: #ffb400;
+            --border-color: #1a2a35;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+        }
+        
+        .card-container { 
+            width: 90%; max-width: 400px; 
+            background: rgba(15, 22, 28, 0.95); 
+            border: 1px solid var(--border-color); 
+            border-radius: 25px; padding: 25px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5); text-align: center;
+            position: relative; overflow: hidden;
+        }
+
+        .profile-section { position: relative; width: 120px; height: 120px; margin: 0 auto; }
+        
+        .profile-img-circle { 
+            width: 100%; height: 100%; border-radius: 50%; 
+            border: 3px solid var(--neon-yellow); object-fit: cover;
+        }
+        
+        .live-tag-badge {
+            background: #ff0000; font-size: 10px; font-weight: bold; padding: 3px 10px; 
+            border-radius: 12px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            letter-spacing: 1px;
+        }
+
+        h2 { margin: 25px 0 5px; font-size: 26px; color: #fff; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; }
+        .cricket-expert-title { color: var(--neon-yellow); font-size: 14px; font-weight: bold; margin-bottom: 25px; display: block; }
+
+        .vip-stats-grid { 
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; 
+            margin-bottom: 25px; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); 
+            padding: 15px 0; 
+        }
+        
+        .vip-stat h3 { font-size: 18px; margin: 0; color: var(--neon-yellow); font-weight: bold; }
+        .vip-stat p { font-size: 10px; margin: 5px 0 0; color: #8a99a4; text-transform: uppercase; font-weight: bold; }
+
+        .accuracy-neon-box { 
+            background: #0d161d; padding: 15px; border-radius: 15px; 
+            margin-bottom: 20px; border: 1px solid var(--border-color); text-align: left;
+        }
+        
+        .accuracy-text { font-size: 14px; font-weight: bold; display: flex; justify-content: space-between; margin-bottom: 10px; }
+        
+        .accuracy-bar-bg { width: 100%; height: 10px; background: var(--border-color); border-radius: 10px; overflow: hidden; }
+        
+        .accuracy-bar-fill { 
+            width: 99%; height: 100%; background: var(--neon-green); border-radius: 10px; 
+            box-shadow: 0 0 15px var(--neon-green); 
+        }
+
+        .dual-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }.cta-btn { 
+            padding: 15px 5px; border-radius: 12px; font-weight: bold; font-size: 13px;
+            text-decoration: none; display: flex; align-items: center; justify-content: center; 
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:active { transform: scale(0.97); }
+        
+        .btn-tg-blue { background: var(--neon-blue); color: white; box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3); }
+        
+        .btn-tips-yellow { background: var(--neon-yellow); color: #000; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.3); }
+
+        .prematch-info-box { 
+            background: rgba(255,255,255,0.03); border-radius: 15px; 
+            padding: 15px; font-size: 13px; line-height: 1.5; color: #8a99a4; text-align: left; 
+            border: 1px solid var(--border-color); 
+        }
+        
+        .info-dot { color: var(--neon-green); font-size: 15px; margin-right: 5px; }
+
+        .redirect-timer-text { color: #ff3e3e; font-weight: bold; margin-top: 25px; display: block; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <div class="profile-section">
+            <img src="https://i.postimg.cc/jSZvYDvc/Pi7-Tool-somes1.jpg" alt="Somesh Thakre" class="profile-img-circle">
+            <span class="live-tag-badge">LIVE</span>
+        </div>
         
         <h2>SOMESH THAKRE</h2>
-        <span class="expert-tag">🏏 CRICKET PREDICTION EXPERT</span>
+        <span class="cricket-expert-title">🏏 CRICKET PREDICTION EXPERT</span>
 
-        <div class="stats-grid">
-            <div class="stat-item"><h3>100K+</h3><p>Followers</p></div>
-            <div class="stat-item"><h3>100K+</h3><p>Subscribers</p></div>
-            <div class="stat-item"><h3>5,447</h3><p>Predictions</p></div>
+        <div class="vip-stats-grid">
+            <div class="vip-stat"><h3>100K+</h3><p>Followers</p></div>
+            <div class="vip-stat"><h3>100K+</h3><p>Subscribers</p></div>
+            <div class="vip-stat"><h3>5,447</h3><p>Predictions</p></div>
         </div>
 
-        <div class="accuracy-box">
-            <div class="accuracy-header">
+        <div class="accuracy-neon-box">
+            <div class="accuracy-text">
                 <span>🎯 Prediction Accuracy</span>
-                <span style="color: var(--neon-green); font-weight: bold;">99%</span>
+                <span style="color: var(--neon-green);">99%</span>
             </div>
-            <div class="bar-bg"><div class="bar-fill"></div></div>
+            <div class="accuracy-bar-bg"><div class="accuracy-bar-fill"></div></div>
         </div>
 
-        <div class="btn-container">
-            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="btn btn-blue" onclick="fbq('track', 'Lead');">✈️ JOIN TELEGRAM</a>
-            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="btn btn-yellow" onclick="fbq('track', 'Lead');">⚡ PRE-MATCH TIPS</a>
+        <div class="dual-btn-row">
+            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tg-blue" onclick="fbq('track', 'Lead');">✈️ JOIN TELEGRAM</a>
+            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tips-yellow" onclick="fbq('track', 'Lead');">⚡ PRE-MATCH TIPS</a>
         </div>
 
-        <div class="info-box">
-            <span style="color: var(--neon-green);">●</span> <b>Pre-Match Predictions</b> – Follow our Telegram channel for upcoming match insights & analysis.
+        <div class="prematch-info-box">
+            <span class="info-dot">●</span> <b>Pre-Match Predictions</b> – Follow our Telegram channel for upcoming match insights & analysis.
         </div>
 
-        <span class="timer-text">RE-DIRECTING IN: <span id="count">15</span> SECONDS</span>
+        <span class="redirect-timer-text">RE-DIRECTING IN: <span id="count">15</span> SECONDS</span>
     </div>
 
     <script>
         var timeLeft = 15;
+        var timerElement = document.getElementById("count");
+        
         var counter = setInterval(function(){
             timeLeft--;
-            document.getElementById("count").innerHTML = timeLeft;
-            if(timeLeft <= 0){
+            if (timeLeft <= 0) {
                 clearInterval(counter);
                 fbq('track', 'Lead');
                 window.location.href = "https://t.me/+4rp-w74OB8U4NWM1";
+            } else {
+                timerElement.innerHTML = timeLeft;
             }
         }, 1000);
     </script>
