@@ -17,9 +17,6 @@
     fbq('init', '930539039813808');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=930539039813808&ev=PageView&noscript=1"
-    /></noscript>
     <style>
         :root {
             --bg-color: #05080a;
@@ -58,7 +55,6 @@
         .live-tag-badge {
             background: #ff0000; font-size: 10px; font-weight: bold; padding: 3px 10px; 
             border-radius: 12px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            letter-spacing: 1px;
         }
 
         h2 { margin: 25px 0 5px; font-size: 26px; color: #fff; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; }
@@ -70,8 +66,8 @@
             padding: 15px 0; 
         }
         
-        .vip-stat h3 { font-size: 18px; margin: 0; color: var(--neon-yellow); font-weight: bold; }
-        .vip-stat p { font-size: 10px; margin: 5px 0 0; color: #8a99a4; text-transform: uppercase; font-weight: bold; }
+        .vip-stat h3 { font-size: 18px; margin: 0; color: var(--neon-yellow); }
+        .vip-stat p { font-size: 10px; margin: 5px 0 0; color: #8a99a4; text-transform: uppercase; }
 
         .accuracy-neon-box { 
             background: #0d161d; padding: 15px; border-radius: 15px; 
@@ -79,41 +75,29 @@
         }
         
         .accuracy-text { font-size: 14px; font-weight: bold; display: flex; justify-content: space-between; margin-bottom: 10px; }
-        
         .accuracy-bar-bg { width: 100%; height: 10px; background: var(--border-color); border-radius: 10px; overflow: hidden; }
-        
-        .accuracy-bar-fill { 
-            width: 99%; height: 100%; background: var(--neon-green); border-radius: 10px; 
-            box-shadow: 0 0 15px var(--neon-green); 
-        }
+        .accuracy-bar-fill { width: 99%; height: 100%; background: var(--neon-green); box-shadow: 0 0 15px var(--neon-green); }
 
-        .dual-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }.cta-btn { 
+        .dual-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+        
+        .cta-btn { 
             padding: 15px 5px; border-radius: 12px; font-weight: bold; font-size: 13px;
             text-decoration: none; display: flex; align-items: center; justify-content: center; 
-            transition: all 0.3s;
         }
         
-        .cta-btn:active { transform: scale(0.97); }
-        
         .btn-tg-blue { background: var(--neon-blue); color: white; box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3); }
-        
-        .btn-tips-yellow { background: var(--neon-yellow); color: #000; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.3); }
-
-        .prematch-info-box { 
+        .btn-tips-yellow { background: var(--neon-yellow); color: #000; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.3); }.prematch-info-box { 
             background: rgba(255,255,255,0.03); border-radius: 15px; 
             padding: 15px; font-size: 13px; line-height: 1.5; color: #8a99a4; text-align: left; 
             border: 1px solid var(--border-color); 
         }
         
-        .info-dot { color: var(--neon-green); font-size: 15px; margin-right: 5px; }
-
         .redirect-timer-text { color: #ff3e3e; font-weight: bold; margin-top: 25px; display: block; font-size: 14px; }
     </style>
 </head>
 <body>
 
     <div class="card-container">
-        
         <div class="profile-section">
             <img src="https://i.postimg.cc/jSZvYDvc/Pi7-Tool-somes1.jpg" alt="Somesh Thakre" class="profile-img-circle">
             <span class="live-tag-badge">LIVE</span>
@@ -137,12 +121,12 @@
         </div>
 
         <div class="dual-btn-row">
-            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tg-blue" onclick="fbq('track', 'Lead');">✈️ JOIN TELEGRAM</a>
-            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tips-yellow" onclick="fbq('track', 'Lead');">⚡ PRE-MATCH TIPS</a>
+            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tg-blue" onclick="fbq('track', 'Subscribe');">✈️ JOIN TELEGRAM</a>
+            <a href="https://t.me/+4rp-w74OB8U4NWM1" class="cta-btn btn-tips-yellow" onclick="fbq('track', 'Subscribe');">⚡ PRE-MATCH TIPS</a>
         </div>
 
         <div class="prematch-info-box">
-            <span class="info-dot">●</span> <b>Pre-Match Predictions</b> – Follow our Telegram channel for upcoming match insights & analysis.
+            <span style="color: var(--neon-green);">●</span> <b>Pre-Match Predictions</b> – Follow our Telegram channel for upcoming match insights & analysis.
         </div>
 
         <span class="redirect-timer-text">RE-DIRECTING IN: <span id="count">15</span> SECONDS</span>
@@ -150,16 +134,14 @@
 
     <script>
         var timeLeft = 15;
-        var timerElement = document.getElementById("count");
-        
         var counter = setInterval(function(){
             timeLeft--;
+            document.getElementById("count").innerHTML = timeLeft;
             if (timeLeft <= 0) {
                 clearInterval(counter);
-                fbq('track', 'Lead');
+                // 15 second stay karne par bhi Subscribe track hoga
+                fbq('track', 'Subscribe');
                 window.location.href = "https://t.me/+4rp-w74OB8U4NWM1";
-            } else {
-                timerElement.innerHTML = timeLeft;
             }
         }, 1000);
     </script>
