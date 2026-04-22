@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somesh Thakre - Cricket Expert</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #0a0a0a; color: white; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .main-bg { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2000'); background-size: cover; background-position: center; }
+        .timer { font-size: 65px; background: #0044ff; border-radius: 50%; width: 130px; height: 130px; line-height: 130px; margin: 25px; border: 5px solid #ffffff; box-shadow: 0 0 30px rgba(0, 68, 255, 0.6); font-weight: bold; }
+        .btn { background: #0044ff; color: white; padding: 22px 45px; text-decoration: none; font-weight: bold; border-radius: 60px; font-size: 26px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: 0.4s; border: 2px solid #fff; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .btn:hover { background: #fff; color: #0044ff; }
+        h1 { font-size: 45px; margin-bottom: 5px; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <div class="main-bg">
+        <h1>🙏 WELCOME 🙏</h1>
+        <h2 style="color: #00ffcc; font-size: 35px; margin-top: 0;">SOMESH THAKRE</h2>
+        <p>JOIN NOW FOR 99% ACCURATE PRE-MATCH TIPS</p>
+        <br>
+        <a href="https://t.me/+4rp-w74OB8U4NWM1" class="btn">JOIN TELEGRAM NOW ✈️</a>
+        <p style="margin-top: 40px; color: #ffcc00;">FREE JOINING ENDS IN...</p>
+        <div class="timer" id="count">15</div>
+    </div>
+    <script>
+        var count = 15;
+        var counter = setInterval(function(){
+            count--;
+            if (count <= 0) { document.getElementById("count").innerHTML = "0"; clearInterval(counter); return; }
+            document.getElementById("count").innerHTML = count;
+        }, 1000);
+    </script>
+</body>
+</html>
